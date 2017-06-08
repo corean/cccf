@@ -16,7 +16,18 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('countdown', require('./components/countdown.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: { countdown }
+
+});
+
+Vue.filter('two_digits', function (value) {
+    if(value.toString().length <= 1)
+    {
+        return "0"+value.toString();
+    }
+    return value.toString();
 });

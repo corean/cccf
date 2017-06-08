@@ -16,4 +16,6 @@
         </div>
     </div>
     <example></example>
+    <countdown date="August 15, 2017"></countdown>
+
 @stop
